@@ -26,11 +26,6 @@ Tested hardware for this repo:
 3. Copy the local config template and add the exact credentials.
 4. Keep the camera in that remote-control mode while using the tally unit.
 
-```bash
-cp m5stickc_sony_remote_tally_arduino/config.example.h \
-  m5stickc_sony_remote_tally_arduino/config.h
-```
-
 ## Install With Arduino IDE
 
 1. Open Arduino IDE.
