@@ -10,11 +10,13 @@ Direct-hardware Arduino tally and record controller for the original `M5StickC` 
 - uses the built-in red LED on `GPIO10` as the tally light
 - shows connection, camera, and battery state on the built-in display
 
-## Verified Scope
+## Hardware
 
+Tested hardware for this repo:
+
+- camera body: Sony `a7S II`
 - board: original `M5StickC`
-- verified camera body: Sony `a7S II`
-- verified camera workflow: `Smart Remote Embedded`
+- camera workflow: `Smart Remote Embedded`
 - local Wi-Fi credentials stay in an ignored `config.h`
 
 ## Quick Setup
@@ -29,18 +31,25 @@ cp m5stickc_sony_remote_tally_arduino/config.example.h \
   m5stickc_sony_remote_tally_arduino/config.h
 ```
 
-## Build And Upload
+## Install With Arduino IDE
 
-Compile with the Arduino IDE bundled CLI:
+1. Open Arduino IDE.
+2. Install the `M5Stack` ESP32 board package if it is not already installed.
+3. Open the sketch folder `m5stickc_sony_remote_tally_arduino`.
+4. Select board `M5StickC`.
+5. Copy the config template:
 
-```bash
-'/Applications/Arduino IDE.app/Contents/Resources/app/lib/backend/resources/arduino-cli' compile \
-  --fqbn m5stack:esp32:m5stack_stickc \
-  --build-path /tmp/m5stickc_sony_remote_build \
-  ./m5stickc_sony_remote_tally_arduino
-```
+   ```bash
+   cp m5stickc_sony_remote_tally_arduino/config.example.h \
+     m5stickc_sony_remote_tally_arduino/config.h
+   ```
 
-Upload with Arduino IDE or `arduino-cli upload` while selecting board `M5StickC` and the correct serial port.
+6. Edit `config.h` and enter the exact Sony camera Wi-Fi SSID and password shown by `Smart Remote Embedded`.
+7. Connect the original `M5StickC` over USB.
+8. Select the correct serial port in Arduino IDE.
+9. Click `Upload`.
+
+The sketch will still compile without `config.h` by using the fallback config, but the device will stop at `EDIT CFG` until real credentials are added.
 
 ## Runtime Behavior
 
