@@ -1,6 +1,6 @@
 # M5StickC Sony Remote Recording and Tally Light
 
-External wireless recording button and tally light for Sony cameras using M5StickC, using the Sony `Camera Remote API`.
+Wireless recording button and tally light for Sony cameras using M5StickC, using the Sony `Camera Remote API`.
 
 ## How it works
 
