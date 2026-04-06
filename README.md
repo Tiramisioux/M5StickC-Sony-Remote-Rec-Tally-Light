@@ -2,7 +2,7 @@
 
 Wireless recording button and tally light for Sony cameras using M5StickC, using the Sony `Camera Remote API`. 
 
-Inspired by this project: https://www.hackster.io/Gokux/openclick-lite-open-source-ble-remote-for-sony-cameras-c4652e but since the Sony A7 s ii has no Bluetooth but only Wi-Fi we have to use the Smart Remote Embedded App as a workaround.
+Inspired by this project: https://www.hackster.io/Gokux/openclick-lite-open-source-ble-remote-for-sony-cameras-c4652e. But since the Sony A7 s ii has no Bluetooth but only Wi-Fi we have to use the Smart Remote Embedded App as a workaround.
 
 ## How it works
 
